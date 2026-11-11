@@ -1,0 +1,141 @@
+.accessmodal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.accessmodal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accessmodal-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 440px;
+  max-width: 100%;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  position: relative;
+}
+
+.accessmodal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666666;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.accessmodal-close-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.accessmodal-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 8px 0;
+}
+
+.accessmodal-subtitle {
+  font-size: 13.5px;
+  color: #666666;
+  margin: 0 0 24px 0;
+}
+
+.accessmodal-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accessmodal-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.accessmodal-item-label {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #222222;
+}
+
+.accessmodal-item-desc {
+  font-size: 12.5px;
+  color: #777777;
+  margin-top: 2px;
+}
+
+.accessmodal-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.accessmodal-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.accessmodal-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dddddd;
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.accessmodal-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.accessmodal-switch input:checked + .accessmodal-slider {
+  background-color: #FFC20E;
+}
+
+.accessmodal-switch input:checked + .accessmodal-slider:before {
+  transform: translateX(22px);
+}
+

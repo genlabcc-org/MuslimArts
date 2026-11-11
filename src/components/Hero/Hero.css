@@ -1,0 +1,270 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFC20E;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Background image & gradient overlay */
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  transition: opacity 0.5s ease-in-out, transform 0.8s ease-out;
+  transform: scale(1.02);
+}
+
+.hero-bg-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-bg-image.inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Radiant yellow brand gradient overlay from left matching the screenshot */
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    #FFC20E 0%,
+    #FFC20E 34%,
+    rgba(255, 194, 14, 0.96) 42%,
+    rgba(255, 194, 14, 0.78) 52%,
+    rgba(255, 194, 14, 0.35) 65%,
+    rgba(255, 194, 14, 0) 80%
+  );
+  pointer-events: none;
+}
+
+/* Main content wrapper */
+.hero-content-wrapper {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.hero-text-block {
+  max-width: 580px;
+  animation: fadeInText 0.4s ease-out forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 50px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #1c1c1c;
+  margin: 0 0 32px 0;
+  font-weight: 400;
+  max-width: 480px;
+}
+
+.hero-cta-btn {
+  display: inline-block;
+  background-color: #111111;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.hero-cta-btn:hover {
+  background-color: #262626;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* Bottom Docked Tabs - Flush against bottom edge */
+.hero-tabs-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero-tabs-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-tab-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 12px 12px 0 0;
+  padding: 16px 20px 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 78px;
+}
+
+.hero-tab-card:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.hero-tab-card.active {
+  background: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero-tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.25s ease;
+}
+
+.hero-tab-card.active .hero-tab-indicator {
+  background-color: #FFC20E;
+}
+
+/* CPD Tab active indicator underline (coral to yellow gradient as in image) */
+.hero-tab-card.active.tab-cpd .hero-tab-indicator {
+  background: linear-gradient(90deg, #E05A47 0%, #FFC20E 100%);
+}
+
+.hero-tab-code {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.hero-tab-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #444444;
+  line-height: 1.25;
+}
+
+.hero-tab-card.active .hero-tab-label {
+  font-weight: 600;
+  color: #111111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .hero-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 0;
+  }
+
+  .hero-content-wrapper {
+    padding-top: 110px;
+    margin-bottom: 220px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-tabs-wrapper {
+    position: relative;
+  }
+
+  .hero-tabs-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .hero-tab-card {
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    min-height: 70px;
+  }
+}

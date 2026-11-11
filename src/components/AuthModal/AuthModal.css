@@ -1,0 +1,122 @@
+.authmodal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.authmodal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.authmodal-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 440px;
+  max-width: 100%;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  transform: scale(0.95);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.authmodal-backdrop.open .authmodal-card {
+  transform: scale(1);
+}
+
+.authmodal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666666;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.authmodal-close-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.authmodal-badge {
+  display: inline-block;
+  background-color: #F9F7F2;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.authmodal-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 8px 0;
+}
+
+.authmodal-subtitle {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.authmodal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authmodal-option-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background-color: #faf9f6;
+  border: 1px solid #ebe7df;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #111111;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.authmodal-option-btn:hover {
+  background-color: #FFC20E;
+  border-color: #FFC20E;
+  transform: translateY(-1px);
+}
+
+.authmodal-arrow {
+  font-size: 16px;
+  font-weight: 700;
+}
+

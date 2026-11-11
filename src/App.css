@@ -1,0 +1,45 @@
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility high-contrast mode */
+.app-root.high-contrast {
+  filter: contrast(115%);
+}
+
+.app-root.high-contrast .hero-title,
+.app-root.high-contrast .features-heading,
+.app-root.high-contrast .feature-card-title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Accessibility large text mode */
+.app-root.large-text {
+  font-size: 112%;
+}
+
+.app-root.large-text .hero-title {
+  font-size: 46px;
+}
+
+.app-root.large-text .hero-description {
+  font-size: 17px;
+}
+
+.app-root.large-text .feature-card-description {
+  font-size: 16px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
