@@ -50,7 +50,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 18px;
   outline: none;
-  color: #111111;
+  color: #042623;
 }
 
 .searchmodal-input::placeholder {
@@ -85,19 +85,19 @@
 }
 
 .searchmodal-tag-chip {
-  background-color: #F9F7F2;
-  border: 1px solid #eeebe4;
+  background-color: var(--bg-surface);
+  border: 1px solid #d9efe8;
   padding: 7px 14px;
   border-radius: 999px;
   font-size: 13px;
-  color: #333333;
+  color: #0E3833;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .searchmodal-tag-chip:hover {
-  background-color: #FFC20E;
-  color: #111111;
-  border-color: #FFC20E;
+  background: linear-gradient(90deg, var(--brand-mint) 0%, var(--brand-mint-mid) 100%);
+  color: #042623;
+  border-color: var(--brand-mint);
 }
 

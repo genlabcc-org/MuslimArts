@@ -61,8 +61,8 @@
 
 .authmodal-badge {
   display: inline-block;
-  background-color: #F9F7F2;
-  color: #111111;
+  background-color: var(--brand-primary-light);
+  color: var(--brand-primary-dark);
   font-size: 11px;
   font-weight: 700;
   padding: 4px 10px;
@@ -76,7 +76,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #111111;
+  color: #042623;
   margin: 0 0 8px 0;
 }
 
@@ -98,20 +98,20 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 18px;
-  background-color: #faf9f6;
-  border: 1px solid #ebe7df;
+  background-color: var(--bg-surface);
+  border: 1px solid #d9efe8;
   border-radius: 12px;
   cursor: pointer;
   text-decoration: none;
-  color: #111111;
+  color: #042623;
   font-weight: 600;
   font-size: 14px;
   transition: all 0.2s ease;
 }
 
 .authmodal-option-btn:hover {
-  background-color: #FFC20E;
-  border-color: #FFC20E;
+  background: linear-gradient(90deg, var(--brand-mint) 0%, var(--brand-mint-mid) 100%);
+  border-color: var(--brand-mint);
   transform: translateY(-1px);
 }
 

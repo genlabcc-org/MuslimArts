@@ -3,6 +3,15 @@
   vertical-align: middle;
 }
 
+.logo-emblem-img {
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -21,7 +30,7 @@
 .logo-brand-name {
   font-size: 19px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #042623;
   letter-spacing: -0.02em;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
@@ -29,7 +38,7 @@
 .logo-sub-text {
   font-size: 8.5px;
   font-weight: 700;
-  color: #333333;
+  color: #0E3833;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: 'Plus Jakarta Sans', sans-serif;

@@ -4,27 +4,25 @@ import { Navbar } from './components/Navbar/Navbar';
 import { Hero } from './components/Hero/Hero';
 import { Features } from './components/Features/Features';
 import { InfoBanner } from './components/InfoBanner/InfoBanner';
+import { Testimonials } from './components/Testimonials/Testimonials';
+import { Newsletter } from './components/Newsletter/Newsletter';
+import { HaveQuestions } from './components/HaveQuestions/HaveQuestions';
 import { Footer } from './components/Footer/Footer';
 import { MenuDrawer } from './components/MenuDrawer/MenuDrawer';
 import { SearchModal } from './components/SearchModal/SearchModal';
 import { AuthModal } from './components/AuthModal/AuthModal';
-import { AccessibilityModal } from './components/AccessibilityModal/AccessibilityModal';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const [isAccessOpen, setIsAccessOpen] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isLargeText, setIsLargeText] = useState(false);
 
   return (
-    <div className={`app-root ${isHighContrast ? 'high-contrast' : ''} ${isLargeText ? 'large-text' : ''}`}>
+    <div className="app-root">
       {/* Top Floating / Sticky Navigation Bar */}
       <Navbar
         onOpenMenu={() => setIsMenuOpen(true)}
         onOpenSearch={() => setIsSearchOpen(true)}
-        onOpenAccessibility={() => setIsAccessOpen(true)}
         onOpenAuth={() => setIsAuthOpen(true)}
       />
 
@@ -36,8 +34,17 @@ function App() {
         {/* Features Section: "CHOOSE MUSLIM ARTS COLLEGE" / "A career long advantage" */}
         <Features />
 
-        {/* Info & Stats Banner: signature yellow section */}
+        {/* Info & Stats Banner: Our Difference */}
         <InfoBanner />
+
+        {/* Student & Alumni Testimonials */}
+        <Testimonials />
+
+        {/* Newsletter / Stay Connected */}
+        <Newsletter />
+
+        {/* Have Questions Full-Bleed Banner */}
+        <HaveQuestions />
       </main>
 
       {/* Footer */}
@@ -59,16 +66,6 @@ function App() {
       <AuthModal
         isOpen={isAuthOpen}
         onClose={() => setIsAuthOpen(false)}
-      />
-
-      {/* Accessibility Preferences Modal */}
-      <AccessibilityModal
-        isOpen={isAccessOpen}
-        onClose={() => setIsAccessOpen(false)}
-        isHighContrast={isHighContrast}
-        onToggleHighContrast={() => setIsHighContrast(!isHighContrast)}
-        isLargeText={isLargeText}
-        onToggleLargeText={() => setIsLargeText(!isLargeText)}
       />
     </div>
   );

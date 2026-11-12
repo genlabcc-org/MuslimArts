@@ -52,18 +52,16 @@ export const Hero = () => {
 
   return (
     <section className="hero-section" id="top">
-      {/* Background photos and overlay */}
+      {/* Background video and overlay */}
       <div className="hero-bg-container">
-        {TABS_DATA.map((tab) => (
-          <img
-            key={tab.id}
-            src={tab.image}
-            alt={tab.label}
-            className={`hero-bg-image ${activeTabId === tab.id ? 'active' : 'inactive'}`}
-            loading="eager"
-          />
-        ))}
-        {/* Soft yellow radiant overlay to seamlessly blend content */}
+        <video
+          className="hero-bg-video"
+          src="/assets/campus-hero.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
         <div className="hero-gradient-overlay" />
       </div>
 

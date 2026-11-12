@@ -12,7 +12,7 @@ export const MenuDrawer = ({ isOpen, onClose }) => {
       />
       <div className={`menudrawer-panel ${isOpen ? 'open' : ''}`} role="dialog" aria-modal="true">
         <div className="menudrawer-header">
-          <LeoCussenLogo size={24} />
+          <LeoCussenLogo size={46} />
           <button className="menudrawer-close-btn" onClick={onClose} aria-label="Close menu">
             &times;
           </button>

@@ -4,7 +4,7 @@
   min-height: 680px;
   width: 100%;
   overflow: hidden;
-  background-color: #FFC20E;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,6 +18,16 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-bg-image {
@@ -42,7 +52,7 @@
   pointer-events: none;
 }
 
-/* Radiant yellow brand gradient overlay from left matching the screenshot */
+/* Subtle mint-emerald to white linear gradient overlay over video */
 .hero-gradient-overlay {
   position: absolute;
   top: 0;
@@ -52,12 +62,11 @@
   z-index: 2;
   background: linear-gradient(
     90deg,
-    #FFC20E 0%,
-    #FFC20E 34%,
-    rgba(255, 194, 14, 0.96) 42%,
-    rgba(255, 194, 14, 0.78) 52%,
-    rgba(255, 194, 14, 0.35) 65%,
-    rgba(255, 194, 14, 0) 80%
+    rgba(97, 179, 141, 0.88) 0%,
+    rgba(135, 205, 181, 0.78) 20%,
+    rgba(196, 232, 222, 0.58) 34%,
+    rgba(231, 246, 241, 0.32) 46%,
+    rgba(255, 255, 255, 0) 62%
   );
   pointer-events: none;
 }
@@ -100,7 +109,7 @@
   line-height: 1.08;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #111111;
+  color: #042623;
   margin: 0 0 20px 0;
   text-transform: uppercase;
 }
@@ -109,7 +118,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 15.5px;
   line-height: 1.55;
-  color: #1c1c1c;
+  color: #0B3530;
   margin: 0 0 32px 0;
   font-weight: 400;
   max-width: 480px;
@@ -117,7 +126,7 @@
 
 .hero-cta-btn {
   display: inline-block;
-  background-color: #111111;
+  background-color: #042623;
   color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
@@ -128,13 +137,13 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 14px rgba(4, 38, 35, 0.22);
 }
 
 .hero-cta-btn:hover {
-  background-color: #262626;
+  background-color: #083A35;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 20px rgba(4, 38, 35, 0.28);
 }
 
 .hero-cta-btn:active {
@@ -200,12 +209,12 @@
 }
 
 .hero-tab-card.active .hero-tab-indicator {
-  background-color: #FFC20E;
+  background: linear-gradient(90deg, #61B38D 0%, #00B688 100%);
 }
 
-/* CPD Tab active indicator underline (coral to yellow gradient as in image) */
+/* Research tab active indicator underline */
 .hero-tab-card.active.tab-cpd .hero-tab-indicator {
-  background: linear-gradient(90deg, #E05A47 0%, #FFC20E 100%);
+  background: linear-gradient(90deg, #61B38D 0%, #00B688 100%);
 }
 
 .hero-tab-code {
@@ -213,7 +222,7 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #1a1a1a;
+  color: #042623;
   text-transform: uppercase;
 }
 
@@ -221,13 +230,13 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13.5px;
   font-weight: 500;
-  color: #444444;
+  color: #385954;
   line-height: 1.25;
 }
 
 .hero-tab-card.active .hero-tab-label {
   font-weight: 600;
-  color: #111111;
+  color: #042623;
 }
 
 /* Responsive adjustments */

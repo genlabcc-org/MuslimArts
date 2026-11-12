@@ -4,12 +4,11 @@ import {
   LeoCussenLogo,
   LeoCussenEmblem,
   HamburgerMenuIcon,
-  AccessibilityNavIcon,
   ProfileNavIcon,
   SearchNavIcon
 } from '../Icons';
 
-export const Navbar = ({ onOpenMenu, onOpenSearch, onOpenAccessibility, onOpenAuth }) => {
+export const Navbar = ({ onOpenMenu, onOpenSearch, onOpenAuth }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -42,21 +41,12 @@ export const Navbar = ({ onOpenMenu, onOpenSearch, onOpenAccessibility, onOpenAu
         {/* Center: Muslim Arts College Logo */}
         <div className="navbar-center">
           <a href="#top" title="Muslim Arts College">
-            <LeoCussenLogo withText={!isScrolled || window.innerWidth > 640} size={28} />
+            <LeoCussenLogo withText={!isScrolled || window.innerWidth > 640} size={48} />
           </a>
         </div>
 
-        {/* Right: Accessibility, Profile, Search */}
+        {/* Right: Profile, Search */}
         <div className="navbar-right">
-          <button
-            className="nav-action-icon-btn"
-            onClick={onOpenAccessibility}
-            title="Accessibility Options"
-            aria-label="Accessibility settings"
-          >
-            <AccessibilityNavIcon size={20} />
-          </button>
-
           <button
             className="nav-action-icon-btn"
             onClick={onOpenAuth}

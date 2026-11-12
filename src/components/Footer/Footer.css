@@ -1,5 +1,5 @@
 .footer-wrapper {
-  background-color: #111111;
+  background-color: #042623;
   color: #e5e5e5;
   padding: 80px 24px 40px 24px;
   position: relative;
@@ -41,7 +41,7 @@
 .footer-brand-tagline {
   font-size: 9px;
   font-weight: 700;
-  color: #FFC20E;
+  color: var(--brand-mint);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -76,8 +76,8 @@
 }
 
 .footer-social-link:hover {
-  background: #FFC20E;
-  color: #111111;
+  background: var(--brand-mint);
+  color: #042623;
 }
 
 .footer-col-title {
@@ -106,7 +106,7 @@
 }
 
 .footer-links-list li a:hover {
-  color: #FFC20E;
+  color: var(--brand-mint);
 }
 
 .footer-campus-info {
@@ -154,7 +154,7 @@
 }
 
 .footer-legal-links a:hover {
-  color: #FFC20E;
+  color: var(--brand-mint);
 }
 
 @media (max-width: 992px) {
