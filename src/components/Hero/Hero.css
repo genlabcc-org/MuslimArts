@@ -52,7 +52,7 @@
   pointer-events: none;
 }
 
-/* Subtle mint-emerald to white linear gradient overlay over video */
+/* Deeper emerald green linear gradient overlay over video */
 .hero-gradient-overlay {
   position: absolute;
   top: 0;
@@ -62,11 +62,11 @@
   z-index: 2;
   background: linear-gradient(
     90deg,
-    rgba(97, 179, 141, 0.88) 0%,
-    rgba(135, 205, 181, 0.78) 20%,
-    rgba(196, 232, 222, 0.58) 34%,
-    rgba(231, 246, 241, 0.32) 46%,
-    rgba(255, 255, 255, 0) 62%
+    rgba(24, 92, 68, 0.9) 0%,
+    rgba(42, 118, 90, 0.78) 22%,
+    rgba(72, 150, 120, 0.52) 38%,
+    rgba(97, 179, 141, 0.25) 50%,
+    rgba(97, 179, 141, 0) 64%
   );
   pointer-events: none;
 }
@@ -83,8 +83,8 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  margin-top: 40px;
-  margin-bottom: 100px;
+  margin-top: 95px;
+  margin-bottom: 70px;
 }
 
 .hero-text-block {
@@ -109,7 +109,8 @@
   line-height: 1.08;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #042623;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(4, 38, 35, 0.35);
   margin: 0 0 20px 0;
   text-transform: uppercase;
 }
@@ -118,7 +119,8 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 15.5px;
   line-height: 1.55;
-  color: #0B3530;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 8px rgba(4, 38, 35, 0.3);
   margin: 0 0 32px 0;
   font-weight: 400;
   max-width: 480px;
@@ -126,8 +128,8 @@
 
 .hero-cta-btn {
   display: inline-block;
-  background-color: #042623;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -141,7 +143,7 @@
 }
 
 .hero-cta-btn:hover {
-  background-color: #083A35;
+  background-color: #E7F6F1;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(4, 38, 35, 0.28);
 }
