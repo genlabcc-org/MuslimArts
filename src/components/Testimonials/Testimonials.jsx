@@ -72,7 +72,7 @@ export const Testimonials = () => {
         <div className="testimonials-marquee-track">
           {[...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA].map((item, idx) => (
             <article key={`${item.id}-${idx}`} className="testimonial-slide-card">
-              <div>
+                <div>
                 <div className="testimonial-quote-marks" aria-hidden="true">
                   <svg width="36" height="18" viewBox="0 0 36 18" fill="none">
                     <path d="M0 0H16V16C7.163 16 0 8.837 0 0Z" fill="#61B38D" />
