@@ -15,7 +15,7 @@ import { AuthModal } from './components/AuthModal/AuthModal';
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const [isAuth5Open, setIsAuthOpen] = useState(false);
 
   return (
     <div className="app-root">
@@ -72,3 +72,4 @@ function App() {
 }
 
 export default App;
+  
